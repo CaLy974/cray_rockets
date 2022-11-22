@@ -8,3 +8,12 @@
 legend ~ div.form-check:first-of-type {
   clear: left;
 }
+
+.container-white-2 {
+  max-width: 500px;
+  margin: 20px auto;
+  background-color: rgba(255, 255, 255, 0.884);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 6px rgba(252,61,33,.8) ;
+}

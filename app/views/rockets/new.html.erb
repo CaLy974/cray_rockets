@@ -1,0 +1,11 @@
+<div class="container-white">
+      <%= simple_form_for @rocket do |f| %>
+        <%= f.input :name %>
+        <%= f.input :photo, as: :file %>
+        <%= f.input :capacity %>
+        <%# <%= f.input :country %>
+        <%= f.input :town %>
+        <%= f.input :price %>
+        <%= f.submit "Create", class:"btn-red-2" %>
+      <% end %>
+</div>
