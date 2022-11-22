@@ -1,0 +1,19 @@
+.btn-red{
+  background-color: #FC3D21;
+  color: white
+  font-weight  bold;
+  padding : 15px 33px;
+  width : 81px;
+  height : 32px;
+  border-radius :8px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  display: inline-block;
+  transition: 0.5s ease;
+}
+
+.btn-blue:hover{
+  background-color: #0B3D91;
+  color: white;
+}
