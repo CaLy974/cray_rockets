@@ -1,12 +1,30 @@
-.navbar-lewagon {
+.navbar_custom {
+  // justify-content: space-between;
+  margin-top: 40px;
+  display: block;
+  background: rgba(11, 61, 145, 0.89);
+  color: white;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 20px;
+}
+
+
+.navbar_custom a {
+  text-decoration: none;
+  color: white;
+}
+
+.navbar_custom ul{
+  list-style: none;
+  padding-left: 0%;
+  text-align: center;
+  padding-bottom: 10px;
+  line-height: 113px;
+  display: flex;
   justify-content: space-between;
-  background: white;
 }
-
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
-}
-
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.navbar_custom li{
+  display: inline;
+  padding: 70px;
+  line-height: 10px;
 }

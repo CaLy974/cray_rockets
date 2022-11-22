@@ -1,2 +1,6 @@
 // Import page-specific CSS files here.
-@import "home";
+body {
+  background-image: asset_url("background_starry_sky_img.jpeg");
+  background-position: center;
+  background-size: cover;
+}

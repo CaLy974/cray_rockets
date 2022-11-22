@@ -5,11 +5,9 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-
-
 User.destroy_all
 Rocket.destroy_all
 
 user1 = User.create!(email: "toto@gmail.com", password: "tototo")
 
-rocket1 = Rocket.create!(name:"big mama", user: user1, capacity:"6",  country:"France", town:"Toulon", price:12000.00)
+rocket1 = Rocket.create!(name: "big mama", user: user1, capacity: "6", country: "France", town: "Toulon", price: 12_000_00)
