@@ -1,0 +1,18 @@
+.title-blue {
+  color: $blue;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.title-white {
+  color: white;
+  font-size: 48px;
+  font-weight: 600;
+}
+
+.container-post {
+  margin: 10px auto;
+  max-width: 700px;
+  display: flex;
+  justify-content: space-around;
+}
