@@ -1,0 +1,20 @@
+<div>
+
+  <div class="container-post">
+  <h1 class="title-white">My posts</h1>
+
+  <%= link_to "Create", new_rocket_path, class:"btn-red-2" %>
+  </div>
+
+  <div>
+      <% @rockets.each do |rocket| %>
+        <div class="card-post">
+          <h3 class="title-blue"><%= rocket.name %></h3>
+          <%= link_to "Update", update_path, class:"btn-red-2" %>
+          <%= link_to "Delete", delete_path, class:"btn-red-2" %>
+        </div>
+      <% end %>
+
+  </div>
+
+</div>
