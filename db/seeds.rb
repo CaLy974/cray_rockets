@@ -9,9 +9,9 @@ User.destroy_all
 Rocket.destroy_all
 
 user1 = User.create!(email: "toto@gmail.com", password: "tototo")
-user2 = User.create!(email: "neil.armstrong@gmail.com", password: "neil")
-user3 = User.create!(email: "rude_gambler@gmail.com", password: "rude")
-user4 = User.create!(email: "dede@gmail.com", password: "dede")
+user2 = User.create!(email: "neil.armstrong@gmail.com", password: "neilarmstrong")
+user3 = User.create!(email: "rude_gambler@gmail.com", password: "rudegambler")
+user4 = User.create!(email: "dede@gmail.com", password: "dedede")
 
 
 
