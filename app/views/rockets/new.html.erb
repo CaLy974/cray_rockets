@@ -1,11 +1,11 @@
 <div class="container-white-2">
       <%= simple_form_for @rocket do |f| %>
-        <%= f.input :name, class:"form-design form-text" %>
-        <%= f.input :photo, as: :file %>
-        <%= f.input :capacity, class:"form-design form-text" %>
+        <%= f.input :name, input_html: {class:"form-design form-text"} %>
+        <%= f.input :photo, as: :file, input_html: {class:"form-design form-text"} %>
+        <%= f.input :capacity, input_html: {class:"form-design form-text"} %>
         <%# <%= f.input :country %>
-        <%= f.input :town %>
-        <%= f.input :price %>
+        <%= f.input :town, input_html: {class:"form-design form-text"} %>
+        <%= f.input :price, input_html: {class:"form-design form-text"} %>
         <%= f.submit "Create", class:"btn-red-2" %>
       <% end %>
 </div>
