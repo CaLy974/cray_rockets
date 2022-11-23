@@ -15,5 +15,14 @@ legend ~ div.form-check:first-of-type {
   background-color: rgba(255, 255, 255, 0.884);
   padding: 30px;
   border-radius: 10px;
-  box-shadow: 3px 3px 6px rgba(252,61,33,.8) ;
+  box-shadow: 5px 5px 6px rgba(252,61,33,.9) ;
+}
+
+.form-design {
+  border-radius: 10px;
+  border: 1px solid $blue;
+}
+
+.form-text {
+  color: $blue;
 }
