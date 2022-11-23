@@ -6,12 +6,21 @@
       <li class="list_inline" id="img">
         <%= image_tag("rocket_logo.png") %>
       </li>
-      <li class="list_inline"><a href="">Home</a>
+
+      <%= link_to root_path do %>
+        Home
+      <% end %>
+
+      <li class="list_inline"><a href=""></a>
       </li>
-      <li class="list_inline"><a href="">Booking</a>
-      </li>
-      <li class="list_inline"><a href="">My Posts</a>
-      </li>
+
+      <%= link_to root_path do %>
+        Booking
+      <% end %>
+
+      <%= link_to myposts_path do %>
+        My posts
+      <% end %>
     </ul>
 
     <a href="" class="btn-red">log in</a>
