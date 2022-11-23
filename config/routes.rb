@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
-  root to: "rockets#index"
   # get "rockets/:id", to "rockets#show"
   devise_for :users
+  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  root to: "rockets#index"
+  # get "rockets/:id", to "rockets#show"
 
   resources :rockets, only: [:index, :show, :new, :update, :create]
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
