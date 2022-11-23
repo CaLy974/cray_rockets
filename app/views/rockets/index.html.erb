@@ -1,17 +1,20 @@
 <div class="header">
-
-  <div class="navbar_custom">
-    <%= @navbar %>
-    <img src="logo_rocket.png" alt="">
-    <ul class="list_inline">
-      <li><a href="">Home</a></li>
-      <li><a href="">Booking</a></li>
-      <li><a href="">My Posts</a></li>
-    </ul>
-  </div>
-
 </div>
+
 <div class="container">
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <% @rockets.each do |rocket| %>
+      <div class="col">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title"><%= rocket.name %></h5>
+            <p class="card-text"><%= rocket.price %></p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
 </div>
+
 <div class="footer">
 </div>
