@@ -5,16 +5,21 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
-User.destroy_all
+require "open-uri"
+
 Rocket.destroy_all
+User.destroy_all
 
 user1 = User.create!(email: "toto@gmail.com", password: "tototo")
 user2 = User.create!(email: "neil.armstrong@gmail.com", password: "neilarmstrong")
 user3 = User.create!(email: "rude_gambler@gmail.com", password: "rudegambler")
 user4 = User.create!(email: "dede@gmail.com", password: "dedede")
 
+file = URI.open("https://res.cloudinary.com/debuijcke/image/upload/v1669200861/Rockets/Fus%C3%A9e8_whpgb1.png")
+rocket0 = Rocket.create!(name: "Big mama", user: user1, capacity: "6", country: "France", town: "Toulon", price: 12_000_00)
 
-
+rocket0.photo.attach(io: file, filename: "rocket0.png", content_type: "image/png")
+rocket0.save
 
 rocket1 = Rocket.create!(name: "Big Mama", user: user1, capacity: "6", country: "France", town: "Toulon", price: 12_000_00)
 rocket2 = Rocket.create!(name: "Arianne", user: user2, capacity: "4", country: "United States - Arkansas", town: "Little Rock", price: 65_000_000)

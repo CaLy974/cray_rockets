@@ -27,12 +27,22 @@ class RocketsController < ApplicationController
   end
 
   def edit
+    @rocket = Rocket.find(params[:id])
   end
 
   def update
+    @rocket.user = current_user
+    if @rocket.update(rocket_params)
+      redirect_to myposts_path(@rocket)
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
   def destroy
+    @rocket = Rocket.find(params[:id])
+    @rocket.destroy
+    redirect_to myposts_path, status: :see_other
   end
 
   private
