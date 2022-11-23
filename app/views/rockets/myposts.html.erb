@@ -10,6 +10,7 @@
       <% @rockets.each do |rocket| %>
         <div class="card-post">
           <h3 class="title-blue"><%= rocket.name %></h3>
+          <img src="../../assets/images/Fusée5.png" alt="Rocket-1">
           <%= link_to "Update", update_path, class:"btn-red-2" %>
           <%= link_to "Delete", delete_path, class:"btn-red-2" %>
         </div>
