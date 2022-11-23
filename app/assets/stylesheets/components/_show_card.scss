@@ -16,3 +16,26 @@
 img {
   border-radius: 5px 5px 0 0;
 }
+
+.background {
+  background-image: asset-url("app/assets/images/background_starry_sky_img.jpeg");
+  background-size: cover;
+  height: 62px;
+  width: 200px;
+}
+
+.rocket-show-card-top {
+  display: flex;
+  padding: 3rem 0;
+  align-content: space-between;
+}
+
+.rocket-show-card-bottom {
+  display: flex;
+  padding: 3rem 0;
+  align-content: space-between;
+
+}
+.rocket-show-card-button {
+
+}

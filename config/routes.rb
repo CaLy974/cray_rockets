@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   # get "rockets/:id", to "rockets#show"
 
   resources :rockets, only: [:index, :show, :new, :update, :create]
+
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   get "/rocket", to: "rockets#edit", as: "update"
   delete "/rocket", to: "rockets#destroy", as: "delete"
