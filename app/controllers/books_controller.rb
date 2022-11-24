@@ -5,10 +5,14 @@ class BooksController < ApplicationController
     @book.rocket = @rocket
     @book.user = current_user
     if @book.save
-      redirect_to rocket_books_path
+      redirect_to mybookings_path
     else
       redirect_to rocket_path(@rocket)
     end
+  end
+
+  def mybookings
+    @books = current_user.books
   end
 
   private

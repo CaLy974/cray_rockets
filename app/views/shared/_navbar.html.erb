@@ -14,7 +14,7 @@
       <li class="list_inline"><a href=""></a>
       </li>
 
-      <%= link_to root_path do %>
+      <%= link_to mybookings_path do %>
         My Bookings
       <% end %>
 
@@ -27,5 +27,11 @@
       <% end %>
     </ul>
 
-    <a href="" class="btn-red">log in</a>
+    <%= link_to user_session_path, class:"btn-red" do %>
+      Log-in
+    <% end %>
+    <%= link_to destroy_user_session_path, class:"btn-red", data: {turbo_method: :delete} do %>
+      Log-out
+    <% end %>
+
   </div>
