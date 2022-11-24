@@ -23,7 +23,11 @@ class RocketsController < ApplicationController
   end
 
   def index
-    @rockets = Rocket.all
+    if params[:query].present?
+      @rockets = Rocket.where(country: params[:query])
+    else
+      @rockets = Rocket.all
+    end
   end
 
   def edit
