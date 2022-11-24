@@ -23,7 +23,12 @@ class RocketsController < ApplicationController
   end
 
   def index
-    @rockets = Rocket.all
+    if params[:query].present?
+      sql_query = "country ILIKE :query OR town ILIKE :query"
+      @rockets = Rocket.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @rockets = Rocket.all
+    end
   end
 
   def edit
