@@ -1,14 +1,18 @@
 <div class="container-white-2">
   <div>
     <h1>Rocket name</h1>
+    <%= @rocket.name %>
+    <h2>Owner</h2>
+    <%# <%= @user.current_user %>
+
   </div>
 
   <div class="rocket-show-card-top">
   <div>
     <h2>Capacity:</h2>
-    <h2>Person number:</h2>
-    <h2>Price:15000$:</h2>
-    <a href=>
+    <%= @rocket.capacity %>
+    <h2>Price:</h2>
+    <%= @rocket.price %>
   </div>
     <%= image_tag "Fusée5.png", alt: "Fusee5", width: 200 %>
   </div>
@@ -18,15 +22,17 @@
     <%= image_tag "map.png", alt: "Le Map du monde", width: 200 %>
     <div>
       <a href="app/assets/images/map.png"></a>
-      <h2>Localisation</h2>
-      <h2>Country: France</h2>
-      <h2>City: Marseille</h2>
+      <h2>Localisation:</h2>
+      <h2>Country </h2>
+      <%= @rocket.country %>
+      <h2>City </h2>
+      <%= @rocket.town %>
     </div>
   </div>
 
-    <div class="rocket-show-card-button">
-      <a href="" class="btn-red">Book</a>
-    </div>
+  <div class="rocket-show-card-button">
+    <a href="" class="btn-red">Book</a>
+  </div>
 
 
 </div>
