@@ -37,12 +37,9 @@ class RocketsController < ApplicationController
   end
 
   def update
-    @rocket.user = current_user
-    if @rocket.update(rocket_params)
-      redirect_to myposts_path(@rocket)
-    else
-      render :new, status: :unprocessable_entity
-    end
+    @rocket = Rocket.find(params[:id])
+    @rocket.update(rocket_params)
+    redirect_to myposts_path(@rocket)
   end
 
   def destroy
