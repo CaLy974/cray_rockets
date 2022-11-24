@@ -1,6 +1,6 @@
 <div>
 
-  <div class="container-post">
+  <div class="container-title">
   <h1 class="title-white">My posts</h1>
 
   <%# <%= link_to "Create", new_rocket_path, class:"btn-red-2" %>
@@ -9,6 +9,7 @@
   <div>
       <% @rockets.each do |rocket| %>
         <div class="card-post">
+        <%= link_to "Show", rocket_path(rocket) %>
           <% if rocket.photo.attached? %>
             <%= cl_image_tag rocket.photo.key, height: 180, width: 230, crop: :fill %>
             <% else %>
