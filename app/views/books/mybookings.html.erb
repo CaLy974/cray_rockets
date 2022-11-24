@@ -16,10 +16,13 @@
           <div class="card-inpost">
             <p> <%= book.start_date %></p>
             <p> <%= book.end_date %></p>
-            <p><%= @rocket.name %></p>
-            <p><%= @rocket.capacity %></p>
-            <p><%= @rocket.price%></p>
-            <p><%= @rocket.town %></p>
+            <p><%= book.rocket.name %></p>
+            <% if book.rocket.photo.attached? %>
+             <%= cl_image_tag (book.rocket.photo.key) %>
+            <% end %>
+            <p><%= book.rocket.capacity %></p>
+            <p><%= book.rocket.price%></p>
+            <p><%= book.rocket.town %></p>
           </div>
         </div>
       <% end %>
