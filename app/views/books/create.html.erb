@@ -1,0 +1,29 @@
+
+<div>
+
+  <div class="container-post">
+    <h1 class="title-white">My Bookings</h1>
+  </div>
+
+  <div>
+      <% @books.each do |book| %>
+        <div class="card-post">
+          <%# <% if rocket.photo.attached? %>
+            <%# <%= cl_image_tag rocket.photo.key, height: 180, width: 230, crop: :fill %>
+            <%# <% else %>
+            <%# <%= image_tag("Fusée1.png", class:"image-placeholder") %>
+          <%# <% end %>
+          <div class="card-inpost">
+            <p> <%= book.start_date %></p>
+            <p> <%= book.end_date %></p>
+            <p><%= @rocket.name %></p>
+            <p><%= @rocket.capacity %></p>
+            <p><%= @rocket.price%></p>
+            <p><%= @rocket.town %></p>
+          </div>
+        </div>
+      <% end %>
+
+  </div>
+
+</div>

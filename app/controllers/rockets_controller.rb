@@ -2,6 +2,7 @@ class RocketsController < ApplicationController
 
   def show
     @rocket = Rocket.find(params[:id])
+    @book = Book.new()
   end
 
   def myposts

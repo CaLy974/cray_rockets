@@ -5,7 +5,9 @@ Rails.application.routes.draw do
   root to: "rockets#index"
   # get "rockets/:id", to "rockets#show"
 
-  resources :rockets, only: [:index, :show, :new, :update, :create, :edit, :destroy]
+  resources :rockets do
+    resources :books, only: [:create]
+  end
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   get "/myposts", to: "rockets#myposts"
