@@ -1,15 +1,4 @@
 <div class="header">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-sm-8">
-        <div id="rockets">
-          <% @rockets.each do |rocket| %>
-            <h4><%= rocket.name %></h4>
-          <% end %>
-        </div>
-      </div>
-    </div>
-  </div>
   <%= form_with url: rockets_path, method: :get, class: "d-flex" do %>
   <%= text_field_tag :query,
     params[:query],
