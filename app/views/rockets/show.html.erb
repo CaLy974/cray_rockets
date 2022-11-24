@@ -31,8 +31,11 @@
   </div>
 
   <div class="rocket-show-card-button">
-    <a href="" class="btn-red">Book</a>
-    <%= f.input :dob, order: [:day, :month, :year] %>
+  <%= simple_form_for([@rocket, @book]) do |f| %>
+    <%= f.input :start_date, input_html: {class:"form-design form-text"} %>
+    <%= f.input :end_date, input_html: {class:"form-design form-text"} %>
+  <%= f.submit "Book", class:"btn-red-2" %>
+      <% end %>
   </div>
 
 
