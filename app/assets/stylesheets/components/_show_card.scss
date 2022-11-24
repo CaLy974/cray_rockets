@@ -14,7 +14,7 @@
   border-radius: 5px;
 }
 img {
-  border-radius: 5px 5px 0 0;
+  border-radius: 5px 5px 5px 5px;
 }
 
 .background {
@@ -28,14 +28,13 @@ img {
   display: flex;
   padding: 3rem 0;
   align-content: space-between;
+  justify-content: space-between;
 }
 
 .rocket-show-card-bottom {
   display: flex;
-  padding: 3rem 0;
+  padding: 2rem 0;
   align-content: space-between;
-
-}
-.rocket-show-card-button {
+  justify-content: space-between;
 
 }
