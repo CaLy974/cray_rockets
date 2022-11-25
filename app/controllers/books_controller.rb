@@ -1,6 +1,6 @@
 class BooksController < ApplicationController
   def create
-    @books = Book.new(book_params)
+    @book = Book.new(book_params)
     @rocket = Rocket.find(params[:rocket_id])
     @book.rocket = @rocket
     @book.user = current_user
