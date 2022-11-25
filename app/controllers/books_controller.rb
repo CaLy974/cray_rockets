@@ -12,7 +12,8 @@ class BooksController < ApplicationController
   end
 
   def mybookings
-    @books = current_user.books
+    @user = current_user
+    @books = @user.books
   end
 
   private
