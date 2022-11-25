@@ -1,13 +1,21 @@
 .btn-red-2 {
   background-color: $red;
   padding: 10px 10px;
-  border-radius: 8px;
+  border-radius: 5px;
   text-decoration: none;
   color: white;
   display: inline-block;
 }
 
 .btn-red-2:hover {
-  background-color: $blue;
+  background-color: white;
+  color: $blue;
+}
+.btn-red-3 {
+  background-color: $red;
+  height: 37px;
+  border-radius: 5px;
+  text-decoration: none;
   color: white;
+  display: inline-block;
 }
