@@ -24,10 +24,18 @@
 }
 
 .body-card{
-  width: 253px;
-  height: 235px;
-  margin: auto;
-  opacity: 0.4;
+  padding: 1vmin;
+  transition: 0.6s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.body-card img {
+  width: 100%;
+  object-position: center;
+  height: 200px;
 }
 
 .body-card h5{

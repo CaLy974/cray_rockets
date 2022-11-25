@@ -2,14 +2,14 @@
 <div>
 
   <div class="container-title">
-    <h1 class="title-white">My Bookings</h1>
+    <h1 class="title-white">My Reservations</h1>
   </div>
 
   <div>
       <% @books.each do |book| %>
         <div class="card-booking">
           <div>
-          <p><%= book.rocket.name %></p>
+          <p class="title-blue"><%= book.rocket.name %></p>
             <div class="content-text">
               <div>
 
