@@ -3,6 +3,13 @@ class RocketsController < ApplicationController
   def show
     @rocket = Rocket.find(params[:id])
     @book = Book.new()
+    @markers =
+    [
+      {
+        lat: @rocket.geocode[0],
+        lng: @rocket.geocode[1]
+      }
+    ]
   end
 
   def myposts
