@@ -3,23 +3,23 @@
   <%= text_field_tag :query,
     params[:query],
     class: "form-control",
-    placeholder: "Find a rocket"
+    placeholder: "Enter a country or a town"
   %>
   <%= submit_tag "Search", class: "btn btn-primary" %>
   <% end %>
 </div>
 
 <div class="container">
-  <div class="row row-cols-1 row-cols-md-3 g-4">
+  <div class="row row-cols-1 row-cols-md-3 g-4" id="container">
     <% @rockets.each do |rocket| %>
       <%= link_to rocket_path(rocket) do %>
         <div class="col">
           <div class="card">
-            <div class="card-body">
-              <h5 class="card-title"><%= rocket.name %></h5>
-              <p class="card-text"><%= rocket.price %></p>
+            <div class="body-card">
               <% if rocket.photo.attached? %>
-                <%= cl_image_tag rocket.photo.key, height: 300, width: 400, crop: :fill %>
+                <%= cl_image_tag rocket.photo.key, height: 150, width: 290 , crop: :fill %>
+              <h5 class="rocket-name"><%= rocket.name %></h5>
+              <p class="card-text-style">Price: <%= rocket.price %>per day.</p>
               <% end %>
             </div>
           </div>

@@ -23,6 +23,32 @@
   border-radius: 10px;
 }
 
+.body-card{
+  width: 253px;
+  height: 235px;
+  margin: auto;
+  opacity: 0.4;
+}
+
+.body-card h5{
+  font-size: 20px;
+}
+
+.body-card p{
+  font-size: 11px;
+}
+
+#container{
+  margin-top: 150px;
+  display: flex;
+  justify-content: center;
+}
+
+.rocket-name{
+ font-family: $body-font;
+ font-weight: 600;
+}
+
 .card-booking {
   max-width: 700px;
   max-height: 350px;
