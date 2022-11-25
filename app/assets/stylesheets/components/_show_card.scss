@@ -1,5 +1,5 @@
 .button-rouge{
-  background-color: red;
+  background-color: $red;
   border: none;
   color: white;
   padding: 15px 32px;
@@ -29,12 +29,4 @@ img {
   padding: 3rem 0;
   align-content: space-between;
   justify-content: space-between;
-}
-
-.rocket-show-card-bottom {
-  display: flex;
-  padding: 2rem 0;
-  align-content: space-between;
-  justify-content: space-between;
-
 }
