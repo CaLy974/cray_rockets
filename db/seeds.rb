@@ -10,11 +10,11 @@ require "open-uri"
 Rocket.destroy_all
 User.destroy_all
 
-user1 = User.create!(email: "toto@gmail.com", password: "tototo")
-user2 = User.create!(email: "neil.armstrong@gmail.com", password: "neilarmstrong")
-user3 = User.create!(email: "rude_gambler@gmail.com", password: "rudegambler")
-user4 = User.create!(email: "dede@gmail.com", password: "dedede")
-user5 = User.create!(email: "nasa@gmail.com", password: "nasanasa")
+user1 = User.create!(email: "toto@gmail.com", password: "tototo", name: "Toto")
+user2 = User.create!(email: "neil.armstrong@gmail.com", password: "neilarmstrong", name: "Neil")
+user3 = User.create!(email: "rude_gambler@gmail.com", password: "rudegambler", name: "Rude")
+user4 = User.create!(email: "dede@gmail.com", password: "dedede", name: "Dede")
+user5 = User.create!(email: "nasa@gmail.com", password: "nasanasa", name: "Nasa")
 
 file = URI.open("https://res.cloudinary.com/debuijcke/image/upload/v1669200839/Rockets/Fus%C3%A9e6_ndhomg.png")
 rocket0 = Rocket.new(name: "Big mama", user: user1, capacity: "6", country: "France", town: "Toulon", price: 12_000_00)

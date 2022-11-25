@@ -1,34 +1,44 @@
 <div class="container-white-2">
   <div>
     <h1>Rocket name</h1>
-    <%= @rocket.name %>
+    <p class="font"><%= @rocket.name %></p>
     <h2>Owner</h2>
-    <%# <%= @user.current_user %>
-
+    <p class="font"><%= @rocket.user.name %></p>
   </div>
 
   <div class="rocket-show-card-top">
-  <div>
-    <h2>Capacity:</h2>
-    <%= @rocket.capacity %>
-    <h2>Price:</h2>
-    <%= @rocket.price %>
-  </div>
-    <%= image_tag "Fusée5.png", alt: "Fusee5", width: 200 %>
+    <div>
+      <h2>Capacity:</h2>
+      <p class="font"><%= @rocket.capacity %></p>
+      <h2>Price:</h2>
+      <p class="font"><%= @rocket.price %></p>
+    </div>
+      <%# <%= image_tag "Fusée5.png", alt: "Fusee5", width: 200 %>
+      <% if @rocket.photo.attached? %>
+        <%= cl_image_tag @rocket.photo.key, height: 200, width: 200, crop: :fill %>
+      <% end %>
   </div>
 
 
-  <div class="rocket-show-card-bottom">
-    <%= image_tag "map.png", alt: "Le Map du monde", width: 200 %>
+  <div class="rocket-show-card-top">
     <div>
       <a href="app/assets/images/map.png"></a>
-      <h2>Localisation:</h2>
-      <h2>Country </h2>
-      <%= @rocket.country %>
-      <h2>City </h2>
-      <%= @rocket.town %>
+      <div class="">
+        <h2>Country :</h2>
+        <p class="font"><%= @rocket.country%></p>
+      </div>
+      <div class="">
+        <h2>City </h2>
+        <p class="font"><%= @rocket.town %></p>
+      </div>
     </div>
   </div>
+
+    <div style="width: 98%; height: 200px;"
+      data-controller="map"
+      data-map-markers-value="<%= @markers.to_json %>"
+      data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+    </div>
 
   <div class="rocket-show-card-button">
   <%= simple_form_for([@rocket, @book]) do |f| %>
@@ -36,6 +46,8 @@
     <%= f.input :end_date, input_html: {class:"form-design form-text"} %>
   <%= f.submit "Book", class:"btn-red-2" %>
       <% end %>
+  </div>
+  <div class="footer">
   </div>
 
 

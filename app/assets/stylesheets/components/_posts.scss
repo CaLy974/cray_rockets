@@ -5,6 +5,15 @@
   margin-bottom: 30px;
 }
 
+// .title-blue-1 {
+//   color: $blue;
+//   font-size: 25px;
+//   font-weight: 600;
+//   margin-bottom: 30px;
+//   display: flex;
+//   align-items: center;
+// }
+
 .title-white {
   color: white;
   font-size: 48px;
@@ -17,3 +26,13 @@
   display: flex;
   justify-content: center;
 }
+
+.text-blue {
+  color: $blue;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+// .column2 {
+//   grid-auto-rows: 50px;
+// }
