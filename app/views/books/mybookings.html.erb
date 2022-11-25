@@ -1,28 +1,37 @@
 
 <div>
 
-  <div class="container-post">
+  <div class="container-title">
     <h1 class="title-white">My Bookings</h1>
   </div>
 
   <div>
       <% @books.each do |book| %>
-        <div class="card-post">
-          <%# <% if rocket.photo.attached? %>
-            <%# <%= cl_image_tag rocket.photo.key, height: 180, width: 230, crop: :fill %>
-            <%# <% else %>
-            <%# <%= image_tag("Fusée1.png", class:"image-placeholder") %>
-          <%# <% end %>
-          <div class="card-inpost">
-            <p> <%= book.start_date %></p>
-            <p> <%= book.end_date %></p>
-            <p><%= book.rocket.name %></p>
-            <% if book.rocket.photo.attached? %>
-             <%= cl_image_tag (book.rocket.photo.key) %>
-            <% end %>
-            <p><%= book.rocket.capacity %></p>
-            <p><%= book.rocket.price%></p>
-            <p><%= book.rocket.town %></p>
+        <div class="card-booking">
+          <div>
+          <p><%= book.rocket.name %></p>
+            <div class="content-text">
+              <div>
+
+                  <p class="text-blue">Departure : </p>
+                  <p class="text-blue">Arrival   : </p>
+                  <p class="text-blue">City      : </p>
+                  <p class="text-blue">Capacity  : </p>
+                  <p class="text-blue">Price     : </p>
+              </div>
+              <div>
+                <p class="text-blue"> <%= book.start_date %></p>
+                <p class="text-blue"> <%= book.end_date %></p>
+                <p class="text-blue"> <%= book.rocket.town %></p>
+                <p class="text-blue"> <%= book.rocket.capacity %></p>
+                <p class="text-blue"> <%= book.rocket.price%></p>
+              </div>
+             </div>
+              <% if book.rocket.photo.attached? %>
+          </div>
+          <div>
+              <%= cl_image_tag (book.rocket.photo.key), height: 280, width: 310 %>
+              <% end %>
           </div>
         </div>
       <% end %>

@@ -6,7 +6,7 @@
   <%# <%= link_to "Create", new_rocket_path, class:"btn-red-2" %>
   </div>
 
-  <div>
+  <div class="column2">
       <% @rockets.each do |rocket| %>
         <div class="card-post">
           <% if rocket.photo.attached? %>
@@ -14,7 +14,7 @@
             <% else %>
             <%= image_tag("Fusée1.png", class:"image-placeholder") %>
           <% end %>
-          <div class="card-inpost">
+          <div class="card-text">
             <h3 class="title-blue"><%= link_to rocket.name, rocket_path(rocket) %></h3>
             <%= link_to "Update", edit_rocket_path(rocket), class:"btn-red-2" %>
             <%= link_to "Delete", rocket_path(rocket), data: {turbo_method: :delete}, class:"btn-red-2" %>
